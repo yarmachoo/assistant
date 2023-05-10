@@ -90,6 +90,7 @@ class MainWindow(QMainWindow):
                     self.open_new_window()
                 assistant = app.Assistant()
                 assistant.run()
+                #kjdfkff
                 print(data)
         else:
             self.open_new_window()
