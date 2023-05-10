@@ -7,6 +7,7 @@ from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtCore import QSize
 import json
 import sounddevice as sd
+import app
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -87,6 +88,8 @@ class MainWindow(QMainWindow):
                 language = data['language']
                 if (key=='') | (town =='') | (language ==''):
                     self.open_new_window()
+                assistant = app.Assistant()
+                assistant.run()
                 print(data)
         else:
             self.open_new_window()
